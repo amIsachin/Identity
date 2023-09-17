@@ -1,0 +1,30 @@
+﻿@model Domain.Entities.IdentityEntities.RegisterViewModel
+
+
+@{
+    ViewData["Title"] = "Register";
+}
+
+<form method="post">
+
+    <div class="mb-3">
+        <label class="form-label">Email address</label>
+        <input type="email" class="form-control" aria-describedby="emailHelp" asp-for="Email">
+        <sapn asp-validation-for="Email" class="text-danger"></sapn>
+    </div>
+
+     <div class="mb-3">
+        <label class="form-label">Password</label>
+        <input type="password" class="form-control" aria-describedby="emailHelp" asp-for="Password">
+        <sapn asp-validation-for="Password" class="text-danger"></sapn>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Confirm Password</label>
+        <input type="password" class="form-control" aria-describedby="emailHelp" asp-for="ConfirmPassword">
+        <sapn asp-validation-for="ConfirmPassword" class="text-danger"></sapn>
+    </div>
+
+    <button class="btn btn-primary">Register</button>
+
+</form>
